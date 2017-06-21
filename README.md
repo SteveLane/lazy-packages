@@ -12,7 +12,8 @@ So, ask yourself the following questions:
 
 - Do your scripts contain whole heap of `library` and `require` calls to attach packages to whatever you're doing?
 - Are you too lazy to:
-    a. Write a proper R package and specify all your dependencies;
+
+	a. Write a proper R package and specify all your dependencies;
     b. Use another add-on library such as [pacman](https://github.com/trinker/pacman), and remember new syntax to load/install packages (e.g. `pacman::p_load(cool_package)`); and
 	c. Run your analysis inside a docker container?
 	
