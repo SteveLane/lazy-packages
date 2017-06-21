@@ -28,7 +28,14 @@ First, make the `strip_libs.sh` bash script executable (`chmod u+x strip_libs.sh
 $ ./strip_libs ../R/ installs.txt
 ```
 
-This will extract all the packages, sort them, and remove duplicates; see [this post](http://stevelane.github.io/blog/2017/05/17/awk-packages) for more information on the script itself.
+This will extract all the packages, sort them, and remove duplicates; see [this post](http://stevelane.github.io/blog/2017/05/17/awk-packages) for more information on the script itself. If you did this on the example files, you should see that the scripts directory now contains `installs.txt`, with the following contents:
+
+```
+dplyr
+ggplot2
+lme4
+tidyr
+```
 
 Now that you have a list of packages that your data analysis is trying to make use of, do the following (from the terminal still, within the scripts directory) to check if they're installed, and install them if not:
 
