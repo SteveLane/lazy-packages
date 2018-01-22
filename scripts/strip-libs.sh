@@ -4,15 +4,7 @@
 # text file it is stored in.
 folder=$1
 inst=$2
-if [ -f $inst ] ; then
-    rm $inst
-fi
-for filename in $folder/*.R; do
-    if [ -f $filename ]; then
-	awk -F '[(]|[)]' '/^library|^require/{print $2;}' $filename >> $inst
-    fi
-done
-for filename in $folder/*.r; do
+for filename in $folder/*.{r,R}{md,}; do
     if [ -f $filename ]; then
 	awk -F '[(]|[)]' '/^library|^require/{print $2;}' $filename >> $inst
     fi
